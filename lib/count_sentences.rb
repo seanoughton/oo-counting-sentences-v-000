@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    string_array = self.split(/[\!|\?|\.]/)
+    string_array = (self.split(/[\!|\?|\.]/))
     return_array = []
     string_array.each do |element|
       if element.size > 2
