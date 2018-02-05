@@ -15,9 +15,13 @@ class String
   end
 
   def count_sentences
-    string_array = self.split(/[\!|\?|\.]/).delete_if do |element|
-      element.length < 2
+    string_array = self.split(/[\!|\?|\.]/)
+    return_array = []
+    string_array.each do |element|
+      if element.size > 2
+        return_array << element
+      end
     end
-    string_array.count
+    return_array.count
   end
 end
